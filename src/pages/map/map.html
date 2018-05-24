@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="findPlace($event)"></ion-searchbar>
+  <div id="map" class="map-img">
+    <div class="buttons">
+      <ion-fab left edge>
+        <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list>
+          <button ion-fab (click)="changeMapType('NORMAL')" [ngClass]="{'toggle-map-type-color': toggleMapType === 'normal'}">지도</button>
+          <button ion-fab (click)="changeMapType('TERRAIN')" [ngClass]="{'toggle-map-type-color': toggleMapType === 'terrain'}">지적</button>
+          <button ion-fab (click)="changeMapType('SATELLITE')" [ngClass]="{'toggle-map-type-color': toggleMapType === 'satellite'}">위성</button>
+          <button ion-fab (click)="changeMapType('HYBRID')" [ngClass]="{'toggle-map-type-color': toggleMapType === 'hybrid'}">겹침</button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+  </div>
+  <div>
+    <button ion-button (click)="getBounds()">getBounds</button>
+    <p>{{bounds}}</p>
+  </div>
+</ion-content>
