@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GeolocationProvider } from '../../providers/geolocation/geolocation';
 
 declare var naver: any;
 
@@ -16,7 +17,9 @@ export class MapPage {
   private toggleMapType: string;
   private bounds: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private geolocationProvider: GeolocationProvider) {
+
   }
 
   ionViewDidLoad() {
@@ -71,6 +74,11 @@ export class MapPage {
 
   findPlace(address: any) {
 
+  }
+
+  changeCenterToCurrentPosition() {
+    // let resp = this.geolocationProvider.getCurrentPosition();
+    let data = this.geolocationProvider.getCurrentPosition().then(console.log(data));
   }
 
   makeNaverLatLng(lat: any, lon: any) {
