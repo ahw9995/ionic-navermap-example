@@ -57,7 +57,6 @@ export class MapPage {
   getBounds() {
     this.bounds = this.map.getBounds();
     //_min, _sw, _max, _ne
-
   }
 
   changeCenter(lat: any, lon: any) {
@@ -76,9 +75,14 @@ export class MapPage {
 
   }
 
+  /**
+  /* 현재 위치로 지도 화면을 이동한다.
+  **/
   changeCenterToCurrentPosition() {
-    // let resp = this.geolocationProvider.getCurrentPosition();
-    let data = this.geolocationProvider.getCurrentPosition().then(console.log(data));
+    this.geolocationProvider.geolocationCurrentPosition().then((result) => {
+        this.changeCenter(result['lat'], result['lon']);
+    });
+
   }
 
   makeNaverLatLng(lat: any, lon: any) {
