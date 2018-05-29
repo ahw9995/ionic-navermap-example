@@ -9,6 +9,7 @@
 
 <ion-content padding>
   <ion-searchbar (ionInput)="findPlace($event)"></ion-searchbar>
+  <!-- <ion-auto-complete></ion-auto-complete> -->
   <div id="map" class="map-img">
     <div class="buttons">
       <ion-fab left edge>
@@ -23,10 +24,10 @@
     </div>
   </div>
   <div>
-    <button ion-button (click)="getBounds()">getBounds</button>
-    <p>{{bounds}}</p>
+    <button ion-button (click)="clearMarker()">마커 삭제</button>
+    <button ion-button (click)="changeCenterToCurrentPosition()">현재 위치로 이동</button>
   </div>
   <div>
-    <button ion-button (click)="changeCenterToCurrentPosition()">currentPosition</button>
+    <button ion-button (click)="findPlace('테헤란로 538')">위치검색</button>
   </div>
 </ion-content>

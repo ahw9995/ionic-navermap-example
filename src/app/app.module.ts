@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { GeolocationProvider } from '../providers/geolocation/geolocation';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { AutoCompleteModule } from 'ionic2-auto-complete';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AutoCompleteModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,7 +38,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GeolocationProvider,
-    Geolocation
+    Geolocation,
   ]
 })
 export class AppModule {}
