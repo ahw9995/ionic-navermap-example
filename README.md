@@ -4,7 +4,7 @@
 
 > ionic에서는 구글맵 플러그인(**ionic-native-google-maps**)을 사용하여 지도 기능을 넣을 수 있다.  
 다국적이거나 외국을 타겟으로 한 앱의 경우 google map을 써도 되지만, 한국에서 앱을 출시하고자 할 경우 네이버맵이나 다음맵이 좀더 정확한 명칭이나 위치정보를 제공할 것이라 생각한다.  
-그래서 국내맵을 한번 써보자 하였고, 네이버 맵을 적용하여 몇가지 예제를 만들어 보았다.
+그래서 국내맵을 한번 써보자 하였고, 네이버 맵을 적용하여 몇가지 예제를 만들어 보았다.  
 [네이버지도 API v3]: https://developers.naver.com/docs/map/javascriptv3/
 
 
@@ -26,4 +26,4 @@
 - 서브모듈 시스템: https://navermaps.github.io/maps.js/docs/tutorial-4-Submodules.html 참고
 
 7. src/index.html까지 수정이 완료되었다면 콘솔창에 ```$ ionic serve``` 명령어를 입력하여 브라우져에 앱이 잘 뜨는지 확인한다. 문제가 없다면 아래와 같은 화면이 뜬다.
-<img src="md_image/app_screen.png" width="250" height="400"></img><img src="md_image/app_menu.png" width="250" height="400"></img><img src="md_image/app_map.png" width="250" height="400"></img>
+<img src="md_image/app_screen.png" width="200" height="350"></img><img src="md_image/app_menu.png" width="200" height="350"></img><img src="md_image/app_map.png" width="200" height="350"></img>
