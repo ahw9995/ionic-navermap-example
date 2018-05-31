@@ -27,3 +27,6 @@
 
 7. src/index.html까지 수정이 완료되었다면 콘솔창에 ```$ ionic serve``` 명령어를 입력하여 브라우져에 앱이 잘 뜨는지 확인한다. 문제가 없다면 아래와 같은 화면이 뜬다.  
 <img src="md_image/app_screen.png" width="200" height="350"></img><img src="md_image/app_menu.png" width="200" height="350"></img><img src="md_image/app_map.png" width="200" height="350"></img>
+
+## ionic 네이버맵 설정 방법
+작성 중....
